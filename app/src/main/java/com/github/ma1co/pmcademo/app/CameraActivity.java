@@ -65,9 +65,10 @@ public class CameraActivity extends BaseActivity implements SurfaceHolder.Callba
     @Override
     protected boolean onShutterKeyDown() {
         camera.getNormalCamera().takePicture(null, null, null);
-        // expanding code to LOG
-        // i) the filename of the new picture created
-        // 
+        // i) changing code to for camera.getNormalCamera().takePicture(null, null, mPicture);
+        //    then use     PictureCallback mPicture = new PictureCallback()
+        // ii) get the filename of the new picture created
+        // iii) Exif: add TAG UserComment  "something"
         return true;
     }
 
